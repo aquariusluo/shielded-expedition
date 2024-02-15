@@ -27,6 +27,7 @@ cd $HOME && git clone https://github.com/heliaxdev/hermes.git && cd hermes && gi
 cargo build --release --bin hermes
 sudo cp target/release/hermes /usr/local/bin/
 hermes --version
+hermes 1.7.4+38f41c62
 ```
 - Create hermes service
 ```
