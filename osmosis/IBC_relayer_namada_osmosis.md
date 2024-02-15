@@ -289,3 +289,19 @@ namadac balance --owner relayer_se --node $RPC_SE
 naan: 8.5
 ```
 
+Send uosmo from Osmosis to Namada
+```
+osmosisd tx ibc-transfer transfer \
+  transfer \
+  ${CHANNEL_ID_B} \
+  tnam1qq7nfjqrsg8x9vssf87wamav883dw6eargagd763 \
+  1000000uosmo \
+  --from relayer_osmo \
+  --gas auto \
+  --gas-prices 0.025uosmo \
+  --gas-adjustment 1.1 \
+  --node ${RPC_OSMO} \
+  --home ${BASE_DIR_B} \
+  --chain-id osmo-test-5 \
+  --yes
+```
