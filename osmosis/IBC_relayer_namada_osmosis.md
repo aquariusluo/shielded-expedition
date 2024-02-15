@@ -276,7 +276,7 @@ Wrapper transaction accepted at height 22673. Used 24 gas.
 Waiting for inner transaction result...
 Transaction was successfully applied at height 22674. Used 6193 gas.
 ```
-Check balance after transfer
+Check balance after transfer, Succeed to receive "1" token by Osmosis wallet.
 ```
 osmosisd query bank balances osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033
 balances:
