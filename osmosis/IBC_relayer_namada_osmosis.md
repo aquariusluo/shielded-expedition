@@ -94,6 +94,9 @@ Faucet to relayer accounts and check balance
 namadac balance --owner relayer_se --node $RPC_SE
 naan: 30
 
-
+osmosisd query bank balances osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033
+balances:
+- amount: "100000000"
+  denom: uosmo
 ```
 
