@@ -169,10 +169,11 @@ rpc_timeout = '30s'
 EOF
 ```
 ## Add the relayer keys to Hermes
+```
 echo "sadness gallery audit junk key hurt rifle vivid aisle nation fruit brain until track gasp mention before sting collect patch math resemble man limit" > ./mnemonic  
 hermes --config $HERMES_CONFIG keys add --chain $CHAIN_ID_A --key-file $WALLET_PATH_A --overwrite  
 hermes --config $HERMES_CONFIG keys add --chain $CHAIN_ID_B --mnemonic-file ./mnemonic --overwrite  
-
+```
 ## Create IBC channel
 ```
 hermes --config $HERMES_CONFIG \
