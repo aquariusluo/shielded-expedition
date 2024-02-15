@@ -61,7 +61,7 @@ cd $HOME && namada client utils join-network --chain-id $CHAIN_ID_A --dont-prefe
 ```
 
 ## Create relayer accounts for Namada and Osmosis
-Create relayer account for Namada SE
+- Create relayer account for Namada SE
 ```
 namadaw gen --alias relayer_se
 Enter your encryption password: 
@@ -80,7 +80,7 @@ Found transparent address:
   "relayer_se": Implicit: tnam1qq7nfjqrsg8x9vssf87wamav883dw6eargagd763
 ```
 
-Create relayer account for Osmosis
+- Create relayer account for Osmosis
 ```
 osmosisd keys add relayer_osmo
 - address: osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033
@@ -92,7 +92,7 @@ It is the only way to recover your account if you ever forget your password.
 sadness gallery audit junk key hurt rifle vivid aisle nation fruit brain until track gasp mention before sting collect patch math resemble man limit
 ```
 
-Faucet to relayer accounts and check balance
+- Faucet to relayer accounts and check balance
 ```
 namadac balance --owner relayer_se --node $RPC_SE
 naan: 30
@@ -250,7 +250,7 @@ export CHANNEL_ID_A="channel-90"
 export CHANNEL_ID_B="channel-5600"  
 
 ## IBC-tranfer 
-Check balance before transfer
+- Check balance before transfer
 ```
 osmosisd query bank balances osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033
 balances:
@@ -261,7 +261,7 @@ namadac balance --owner relayer_se --node $RPC_SE
 naan: 12
 ```
 
-Send naan from Namada to Osmosis
+- Send naan from Namada to Osmosis
 ```
 namadac --base-dir ${BASE_DIR_A} \
     ibc-transfer \
@@ -278,7 +278,7 @@ Wrapper transaction accepted at height 22673. Used 24 gas.
 Waiting for inner transaction result...
 Transaction was successfully applied at height 22674. Used 6193 gas.
 ```
-Check balance after transfer, Succeed to receive "1" token by Osmosis wallet.
+- Check balance after transfer, Succeed to receive "1" token by Osmosis wallet.
 ```
 osmosisd query bank balances osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033
 balances:
@@ -291,7 +291,7 @@ namadac balance --owner relayer_se --node $RPC_SE
 naan: 8.5
 ```
 
-Send uosmo from Osmosis to Namada
+- Send uosmo from Osmosis to Namada
 ```
 osmosisd tx ibc-transfer transfer \
   transfer \
@@ -335,7 +335,7 @@ balances:
 - amount: "98986614"
   denom: uosmo
 ```
-Send naan from Namada to Osmosis with memo
+- Send naan from Namada to Osmosis with --memo PK
 ```
 namadac --base-dir ${BASE_DIR_A} \
     ibc-transfer \
