@@ -166,3 +166,14 @@ rpc_timeout = '30s'
 EOF
 ```
 
+## Create IBC channel
+```
+hermes --config $HERMES_CONFIG \
+  create channel \
+  --a-chain $CHAIN_ID_A \
+  --b-chain $CHAIN_ID_B \
+  --a-port transfer \
+  --b-port transfer \
+  --new-client-connection --yes
+```
+
