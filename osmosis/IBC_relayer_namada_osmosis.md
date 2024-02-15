@@ -182,8 +182,12 @@ hermes --config $HERMES_CONFIG \
   --new-client-connection --yes
 ```
 Succeed !
+
+<details>
+    <summary> SUCCESS Channel </summary>
+  
 ```
-SUCCESS Channel {
+ {
     ordering: Unordered,
     a_side: ChannelSide {
         chain: BaseChainHandle {
@@ -235,4 +239,6 @@ SUCCESS Channel {
     },
     connection_delay: 0ns,
 }
+
 ```
+</details>
