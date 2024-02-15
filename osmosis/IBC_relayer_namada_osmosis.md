@@ -374,4 +374,13 @@ namadac --base-dir ${BASE_DIR_A} \
     --node ${RPC_SE} \
     --signing-keys relayer_se \
     --memo tpknam1qqjgef9zsd0gsyqn3af9nrgxyhapef3cjn5cyxpjcjgtq60de6502p8rf8h
+Enter your decryption password: 
+converting current asset type to latest asset type...
+Enter your decryption password: 
+Transaction added to mempool.
+Wrapper transaction hash: 675259C21315E6E136CEDD2B92A4CE8A043017E2B65F99638CE9C33CA6002CC1
+Inner transaction hash: 6195AA527E33D3CFD86AD6E79321930749545AE0E40485210612605FCF1B0D72
+Wrapper transaction accepted at height 23570. Used 130 gas.
+Waiting for inner transaction result...
+Transaction was successfully applied at height 23571. Used 8609 gas.
 ```
