@@ -1,6 +1,6 @@
 # Operate a shielded expedition-compatible Osmosis testnet relayer
 
-## Deploy a full node for Osmosis testnet which chain-id is `osmo-test-5`
+## Deploy a full node for Osmosis testnet
 Refer to Osmosis guideline.  
 https://github.com/osmosis-labs/testnets/tree/main/testnets/osmo-test-5
 
