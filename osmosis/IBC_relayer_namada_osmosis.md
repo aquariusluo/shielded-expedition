@@ -301,7 +301,7 @@ osmosisd tx ibc-transfer transfer \
   --gas-prices 0.025uosmo \
   --gas-adjustment 1.1 \
   --node ${RPC_OSMO} \
-  --home ${BASE_DIR_B} \
+  --home "http://127.0.0.1:26657" \
   --chain-id osmo-test-5 \
   --yes
 ```
