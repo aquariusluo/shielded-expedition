@@ -87,3 +87,8 @@ It is the only way to recover your account if you ever forget your password.
 sadness gallery audit junk key hurt rifle vivid aisle nation fruit brain until track gasp mention before sting collect patch math resemble man limit
 ```
 
+Faucet to relayer accounts and check balance
+```
+
+```
+
