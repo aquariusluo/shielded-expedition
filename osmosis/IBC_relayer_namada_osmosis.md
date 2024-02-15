@@ -362,3 +362,15 @@ balances:
 - amount: "98986614"
   denom: uosmo
 ```
+- Shielded transfer from Namada to Osmosis
+```
+namadac --base-dir ${BASE_DIR_A} \
+    ibc-transfer \
+    --amount 1 \
+    --source my-spending-key-alias \
+    --receiver osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033 \
+    --token naan \
+    --channel-id ${CHANNEL_ID_A} \
+    --node ${RPC_SE} \
+    --memo tpknam1qqjgef9zsd0gsyqn3af9nrgxyhapef3cjn5cyxpjcjgtq60de6502p8rf8h
+```
