@@ -304,4 +304,32 @@ osmosisd tx ibc-transfer transfer \
   --home ${BASE_DIR_B} \
   --chain-id osmo-test-5 \
   --yes
+Enter keyring passphrase (attempt 1/3):
+gas estimate: 120214
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 3349121EEFA0A583468E113271E19119DC9F2EDF370B31053A705107CA6D5432
+```
+Check balance after transfer
+```
+namadac balance --owner relayer_se --node $RPC_SE
+naan: 8.5
+transfer/channel-90/uosmo: 1000000
+
+osmosisd query bank balances osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033
+balances:
+- amount: "1"
+  denom: ibc/05D9D8E7078C5573DD0E05F43F88CE0E01D532C3106D7E3D3FFB115AF6950548
+- amount: "98986614"
+  denom: uosmo
 ```
