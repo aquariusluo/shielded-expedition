@@ -11,3 +11,25 @@ cargo build --release --bin hermes
 sudo cp target/release/hermes /usr/local/bin/
 hermes --version
 ```
+- Create hermes service
+```
+sudo tee /usr/lib/systemd/user/hermesd.service > /dev/null <<EOF
+[Unit]
+Description=Hermes Daemon Service
+After=network.target
+StartLimitIntervalSec=60
+StartLimitBurst=3
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=30
+ExecStart=/usr/local/bin/hermes --config $HOME/.hermes/config.toml start 
+
+[Install]
+WantedBy=default.target
+EOF
+```
+sudo chmod 755 /usr/lib/systemd/user/hermesd.service  
+systemctl --user daemon-reload  
+systemctl --user enable hermesd  
