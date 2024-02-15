@@ -250,13 +250,13 @@ export CHANNEL_ID_B="channel-5600"
 ## IBC-tranfer 
 Check balance before transfer
 ```
-namadac balance --owner relayer_se --node $RPC_SE
-naan: 12
-
 osmosisd query bank balances osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033
 balances:
 - amount: "99989620"
   denom: uosmo
+
+namadac balance --owner relayer_se --node $RPC_SE
+naan: 12
 ```
 
 Send naan from Namada to Osmosis
@@ -269,6 +269,23 @@ namadac --base-dir ${BASE_DIR_A} \
     --token naan \
     --channel-id ${CHANNEL_ID_A} \
     --node ${RPC_SE}
-```
 
+Wrapper transaction hash: 51151FA398F02EF7AB99B603895B1357C225785A7CA343817E7D5B76E90C346D
+Inner transaction hash: F4A52E6382234111D0E712A66ACE758B842DB94A35CFE272A770E5D279080182
+Wrapper transaction accepted at height 22673. Used 24 gas.
+Waiting for inner transaction result...
+Transaction was successfully applied at height 22674. Used 6193 gas.
+```
+Check balance after transfer
+```
+osmosisd query bank balances osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033
+balances:
+- amount: "1"
+  denom: ibc/05D9D8E7078C5573DD0E05F43F88CE0E01D532C3106D7E3D3FFB115AF6950548
+- amount: "99989620"
+  denom: uosmo
+
+namadac balance --owner relayer_se --node $RPC_SE
+naan: 8.5
+```
 
