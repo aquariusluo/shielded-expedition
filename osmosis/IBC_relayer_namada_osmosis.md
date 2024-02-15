@@ -50,7 +50,7 @@ cd $HOME && wget https://github.com/anoma/namada/releases/download/v0.31.4/namad
 tar -zxvf namada-v0.31.4-Linux-x86_64.tar.gz && cd ./namada-v0.31.4-Linux-x86_64  
 sudo cp namada /usr/local/bin && sudo cp namadac /usr/local/bin && sudo cp namadaw /usr/local/bin && sudo cp namada /usr/local/bin  
 cd $HOME && namada --version  
- -> Namada v0.31.4   
+Namada v0.31.4   
 ```
 Join shielded expedition network  
 ```
@@ -91,6 +91,9 @@ sadness gallery audit junk key hurt rifle vivid aisle nation fruit brain until t
 
 Faucet to relayer accounts and check balance
 ```
+namadac balance --owner relayer_se --node $RPC_SE
+naan: 30
+
 
 ```
 
