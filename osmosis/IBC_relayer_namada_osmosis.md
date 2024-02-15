@@ -246,3 +246,29 @@ id: "shielded-expedition.88f17d1d14", channel_id: "channel-90"
 id: "osmo-test-5", channel_id: "channel-5600"  
 export CHANNEL_ID_A="channel-90"  
 export CHANNEL_ID_B="channel-5600"  
+
+## IBC-tranfer 
+Check balance before tranfer
+```
+namadac balance --owner relayer_se --node $RPC_SE
+naan: 12
+
+osmosisd query bank balances osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033
+balances:
+- amount: "99989620"
+  denom: uosmo
+```
+
+Send naan from Namada to Osmosis
+```
+namadac --base-dir ${BASE_DIR_A} \
+    ibc-transfer \
+    --amount 1 \
+    --source relayer_se \
+    --receiver osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033 \
+    --token naan \
+    --channel-id ${CHANNEL_ID_A} \
+    --node ${RPC_SE}
+```
+
+
