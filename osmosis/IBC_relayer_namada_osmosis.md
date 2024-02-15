@@ -2,7 +2,7 @@
 
 ## Deploy a full node for Osmosis testnet which chain-id is `osmo-test-5`
 
-## Deploy Hermes
+## Install Hermes
 - Build hermes via source code
 ```
 export TAG="v1.7.4-namada-beta7"
@@ -33,3 +33,10 @@ EOF
 sudo chmod 755 /usr/lib/systemd/user/hermesd.service  
 systemctl --user daemon-reload  
 systemctl --user enable hermesd  
+
+## Install Namada
+cd $HOME && wget https://github.com/anoma/namada/releases/download/v0.31.4/namada-v0.31.4-Linux-x86_64.tar.gz  
+tar -zxvf namada-v0.31.4-Linux-x86_64.tar.gz && cd ./namada-v0.31.4-Linux-x86_64
+sudo cp namada /usr/local/bin && sudo cp namadac /usr/local/bin && sudo cp namadaw /usr/local/bin && sudo cp namada /usr/local/bin  
+cd $HOME  
+namada --version  
