@@ -1,4 +1,7 @@
-# Operate a shielded expedition-compatible Osmosis testnet relayer
+# Operate a shielded expedition-compatible Osmosis testnet relayer  
+- Create IBC relayer channel between Namada SE and Osmosis testnet.
+- Transfer unshielded naan between Namada SE and Osmosis testnet.
+- Transfer shielded naan from Namada SE to Osmosis testnet.
 
 ## Deploy a full node for Osmosis testnet
 Refer to Osmosis node guideline.  
@@ -362,7 +365,7 @@ balances:
 - amount: "98986614"
   denom: uosmo
 ```
-- Shielded transfer from Namada to Osmosis
+- Shielded transfer from "my-spending-key-alias" on Namada to "relayer_osmo" on Osmosis
 ```
 namadac --base-dir ${BASE_DIR_A} \
     ibc-transfer \
@@ -383,4 +386,11 @@ Inner transaction hash: 6195AA527E33D3CFD86AD6E79321930749545AE0E40485210612605F
 Wrapper transaction accepted at height 23570. Used 130 gas.
 Waiting for inner transaction result...
 Transaction was successfully applied at height 23571. Used 8609 gas.
+
+osmosisd query bank balances osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033
+balances:
+- amount: "3"
+  denom: ibc/05D9D8E7078C5573DD0E05F43F88CE0E01D532C3106D7E3D3FFB115AF6950548
+- amount: "98986614"
+  denom: uosmo
 ```
