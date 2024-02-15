@@ -9,6 +9,8 @@ export BASE_DIR_A="$HOME/.local/share/namada"
 export BASE_DIR_B="$HOME/.osmosisd"  
 export HERMES_DIR="$HOME/.hermes"  
 export HERMES_CONFIG="$HERMES_DIR/config.toml"  
+export RPC_SE="94.130.90.47:26657"  
+export RPC_OSMO="127.0.0.1:26657"
 
 ## Install Hermes
 - Build hermes via source code
