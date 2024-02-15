@@ -55,8 +55,8 @@ Join shielded expedition network
 cd $HOME && namada client utils join-network --chain-id $CHAIN_ID_A --dont-prefetch-wasm
 ```
 
-## Create relayer accounts on Namada and Osmosis
-Create relayer account on Namada SE
+## Create relayer accounts for Namada and Osmosis
+Create relayer account for Namada SE
 ```
 namadaw gen --alias relayer_se
 Enter your encryption password: 
@@ -75,7 +75,7 @@ Found transparent address:
   "relayer_se": Implicit: tnam1qq7nfjqrsg8x9vssf87wamav883dw6eargagd763
 ```
 
-Create relayer account on Osmosis
+Create relayer account for Osmosis
 ```
 osmosisd keys add relayer_osmo
 - address: osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033
