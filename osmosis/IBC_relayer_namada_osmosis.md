@@ -55,7 +55,7 @@ sudo cp namada /usr/local/bin && sudo cp namadac /usr/local/bin && sudo cp namad
 cd $HOME && namada --version  
 Namada v0.31.4   
 ```
-Join shielded expedition network  
+- Join shielded expedition network  
 ```
 cd $HOME && namada client utils join-network --chain-id $CHAIN_ID_A --dont-prefetch-wasm
 ```
