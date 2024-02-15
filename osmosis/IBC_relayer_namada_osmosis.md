@@ -2,6 +2,14 @@
 
 ## Deploy a full node for Osmosis testnet which chain-id is `osmo-test-5`
 
+## Setup enviroment variates
+export CHAIN_ID_A="shielded-expedition.88f17d1d14"  
+export CHAIN_ID_B="osmo-test-5"  
+export BASE_DIR_A="$HOME/.local/share/namada"  
+export BASE_DIR_B="$HOME/.osmosisd"  
+export HERMES_DIR="$HOME/.hermes"  
+export HERMES_CONFIG="$HERMES_DIR/config.toml"  
+
 ## Install Hermes
 - Build hermes via source code
 ```
@@ -33,14 +41,6 @@ EOF
 sudo chmod 755 /usr/lib/systemd/user/hermesd.service  
 systemctl --user daemon-reload  
 systemctl --user enable hermesd  
-
-## Setup enviroment variates
-export CHAIN_ID_A="shielded-expedition.88f17d1d14"  
-export CHAIN_ID_B="osmo-test-5"  
-export BASE_DIR_A="$HOME/.local/share/namada"  
-export BASE_DIR_B="$HOME/.osmosisd"  
-export HERMES_DIR="$HOME/.hermes"  
-export HERMES_CONFIG="$HERMES_DIR/config.toml"  
 
 ## Install Namada
 cd $HOME && wget https://github.com/anoma/namada/releases/download/v0.31.4/namada-v0.31.4-Linux-x86_64.tar.gz  
