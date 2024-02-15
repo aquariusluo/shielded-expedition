@@ -181,7 +181,6 @@ hermes --config $HERMES_CONFIG \
   --b-port transfer \
   --new-client-connection --yes
 ```
-Succeed !
 
 <details>
     <summary> SUCCESS Channel </summary>
