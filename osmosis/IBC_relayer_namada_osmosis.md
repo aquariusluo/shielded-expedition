@@ -372,6 +372,6 @@ namadac --base-dir ${BASE_DIR_A} \
     --token naan \
     --channel-id ${CHANNEL_ID_A} \
     --node ${RPC_SE} \
-    --signing-keys tpknam1qqjgef9zsd0gsyqn3af9nrgxyhapef3cjn5cyxpjcjgtq60de6502p8rf8h \
+    --signing-keys relayer_se \
     --memo tpknam1qqjgef9zsd0gsyqn3af9nrgxyhapef3cjn5cyxpjcjgtq60de6502p8rf8h
 ```
