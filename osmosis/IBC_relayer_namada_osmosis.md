@@ -42,7 +42,7 @@ sudo chmod 755 /usr/lib/systemd/user/hermesd.service
 systemctl --user daemon-reload  
 systemctl --user enable hermesd  
 
-## Install Namada
+## Install Namada CLI
 ```bash
 cd $HOME && wget https://github.com/anoma/namada/releases/download/v0.31.4/namada-v0.31.4-Linux-x86_64.tar.gz  
 tar -zxvf namada-v0.31.4-Linux-x86_64.tar.gz && cd ./namada-v0.31.4-Linux-x86_64  
