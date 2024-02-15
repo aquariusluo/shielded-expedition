@@ -241,3 +241,8 @@ hermes --config $HERMES_CONFIG \
 
 ```
 </details>
+
+id: "shielded-expedition.88f17d1d14", channel_id: "channel-90"  
+id: "osmo-test-5", channel_id: "channel-5600"  
+export CHANNEL_ID_A="channel-90"  
+export CHANNEL_ID_B="channel-5600"  
