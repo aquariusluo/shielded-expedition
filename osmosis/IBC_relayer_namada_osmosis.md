@@ -48,6 +48,7 @@ tar -zxvf namada-v0.31.4-Linux-x86_64.tar.gz && cd ./namada-v0.31.4-Linux-x86_64
 sudo cp namada /usr/local/bin && sudo cp namadac /usr/local/bin && sudo cp namadaw /usr/local/bin && sudo cp namada /usr/local/bin  
 cd $HOME && namada --version  
  -> Namada v0.31.4   
-namada client utils join-network --chain-id $CHAIN_ID_A --dont-prefetch-wasm  
+   
+cd $HOME && namada client utils join-network --chain-id $CHAIN_ID_A --dont-prefetch-wasm  
 
 
