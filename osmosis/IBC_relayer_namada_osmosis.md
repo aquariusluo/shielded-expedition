@@ -333,3 +333,29 @@ balances:
 - amount: "98986614"
   denom: uosmo
 ```
+Send naan from Namada to Osmosis with memo
+```
+namadac --base-dir ${BASE_DIR_A} \
+    ibc-transfer \
+    --amount 1 \
+    --source relayer_se \
+    --receiver osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033 \
+    --token naan \
+    --channel-id ${CHANNEL_ID_A} \
+    --node ${RPC_SE} \
+    --memo tpknam1qqjgef9zsd0gsyqn3af9nrgxyhapef3cjn5cyxpjcjgtq60de6502p8rf8h
+Enter your decryption password: 
+Transaction added to mempool.
+Wrapper transaction hash: 65FD483C04CE457E7A615836B39726D653F916EEA76D00D6578E4CA45714574A
+Inner transaction hash: 28C8F2A7D190FF7F912222E988DD2C6C020AFEC64656317A4417CD7FCD36944E
+Wrapper transaction accepted at height 22807. Used 26 gas.
+Waiting for inner transaction result...
+Transaction was successfully applied at height 22808. Used 6193 gas.
+
+osmosisd query bank balances osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033
+balances:
+- amount: "2"
+  denom: ibc/05D9D8E7078C5573DD0E05F43F88CE0E01D532C3106D7E3D3FFB115AF6950548
+- amount: "98986614"
+  denom: uosmo
+```
