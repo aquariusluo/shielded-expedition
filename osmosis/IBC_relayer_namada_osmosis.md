@@ -248,7 +248,7 @@ export CHANNEL_ID_A="channel-90"
 export CHANNEL_ID_B="channel-5600"  
 
 ## IBC-tranfer 
-Check balance before tranfer
+Check balance before transfer
 ```
 namadac balance --owner relayer_se --node $RPC_SE
 naan: 12
