@@ -7,10 +7,11 @@ export CHAIN_ID_A="shielded-expedition.88f17d1d14"
 export CHAIN_ID_B="osmo-test-5"  
 export BASE_DIR_A="$HOME/.local/share/namada"  
 export BASE_DIR_B="$HOME/.osmosisd"  
+export WALLET_PATH_A="$BASE_DIR_A/$CHAIN_ID_A/wallet.toml"
 export HERMES_DIR="$HOME/.hermes"  
 export HERMES_CONFIG="$HERMES_DIR/config.toml"  
 export RPC_SE="94.130.90.47:26657"  
-export RPC_OSMO="127.0.0.1:26657"
+export RPC_OSMO="127.0.0.1:26657"  
 
 ## Install Hermes
 - Build hermes via source code
@@ -165,6 +166,8 @@ trust_threshold = { numerator = '1', denominator = '3' }
 rpc_timeout = '30s'
 EOF
 ```
+## Add the relayer keys to Hermes
+hermes --config $HERMES_CONFIG keys add --chain $CHAIN_ID_A --key-file $WALLET_PATH_A --overwrite
 
 ## Create IBC channel
 ```
