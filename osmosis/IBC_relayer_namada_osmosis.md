@@ -55,6 +55,35 @@ Join shielded expedition network
 cd $HOME && namada client utils join-network --chain-id $CHAIN_ID_A --dont-prefetch-wasm
 ```
 
+## Create relayer accounts on Namada and Osmosis
+Create relayer account on Namada SE
+```
+namadaw gen --alias relayer_se
+Enter your encryption password: 
+Enter same passphrase again: 
+Using HD derivation path m/44'/877'/0'/0'/0'
+Safely store your 24 words mnemonic.
+country return ketchup used few mimic announce school share feature cluster sort night gate ghost decorate pull ankle empty pulse planet fan better shrimp
+Successfully added a key and an address with alias: "relayer_se"
 
+namadaw find --alias relayer_se
+Found transparent keys:
+  Alias "relayer_se" (encrypted):
+    Public key hash: 3D34C803820E62B21049FCEEEFAC39E2D76B3D1A
+    Public key: tpknam1qpscda50x8k3z6suzmhma834pkgw5dzdfh0vwqnzes8mawhdywtgwekeyrp
+Found transparent address:
+  "relayer_se": Implicit: tnam1qq7nfjqrsg8x9vssf87wamav883dw6eargagd763
+```
 
+Create relayer account on Osmosis
+```
+osmosisd keys add relayer_osmo
+- address: osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033
+  name: relayer_osmo
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A7qWbzb4VOei3kGtqPWHb3iD37z2pJlqs9+Sl+BgiGSV"}'
+  type: local
+**Important** write this mnemonic phrase in a safe place.
+It is the only way to recover your account if you ever forget your password.
+sadness gallery audit junk key hurt rifle vivid aisle nation fruit brain until track gasp mention before sting collect patch math resemble man limit
+```
 
