@@ -99,4 +99,70 @@ balances:
 - amount: "100000000"
   denom: uosmo
 ```
+## Configure hermes
+mkdir $HERMES_DIR && cd $HERMES_DIR
+```
+sudo tee $HERMES_CONFIG > /dev/null <<EOF
+[global]
+log_level = 'info'
+ 
+[mode]
+
+[mode.clients]
+enabled = true
+refresh = true
+misbehaviour = true
+
+[mode.connections]
+enabled = false
+
+[mode.channels]
+enabled = false
+
+[mode.packets]
+enabled = true
+clear_interval = 10
+clear_on_start = false
+tx_confirmation = true
+
+[telemetry]
+enabled = false
+host = '127.0.0.1'
+port = 3001
+
+[[chains]]
+id = 'shielded-expedition.88f17d1d14'  # set your chain ID
+type = 'Namada'
+rpc_addr = 'http://94.130.90.47:26657'  # set the IP and the port of the chain
+grpc_addr = 'http://94.130.90.47:9090'  # not used for now
+event_source = { mode = 'push', url = 'ws://94.130.90.47:26657/websocket', batch_delay = '500ms' } 
+account_prefix = ''  # not used
+key_name = 'relayer_se'  # The key is an account name you made
+store_prefix = 'ibc'
+gas_price = { price = 0.0001, denom = 'tnam1qxvg64psvhwumv3mwrrjfcz0h3t3274hwggyzcee' } 
+rpc_timeout = '30s'
+
+[[chains]]
+id = 'osmo-test-5'
+type = 'CosmosSdk'
+rpc_addr = 'http://127.0.0.1:36657'  # set the IP and the port of the chain
+grpc_addr = 'http://127.0.0.1:9090'
+event_source = { mode = 'push', url = 'ws://127.0.0.1:36657/websocket', batch_delay = '500ms' } 
+account_prefix = 'osmo'
+key_name = 'relayer_osmo'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 400000
+max_gas = 120000000
+gas_price = { price = 0.0025, denom = 'uosmo' }
+gas_multiplier = 1.1
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '30s'
+trusting_period = '4days'
+trust_threshold = { numerator = '1', denominator = '3' }
+rpc_timeout = '30s'
+EOF
+```
 
