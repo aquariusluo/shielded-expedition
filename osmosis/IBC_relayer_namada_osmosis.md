@@ -1,7 +1,7 @@
 # Operate a shielded expedition-compatible Osmosis testnet relayer  
-- Create IBC relayer channel between Namada SE and Osmosis testnet.
-- Transfer unshielded naan between Namada SE and Osmosis testnet.
-- Transfer shielded naan from Namada SE to Osmosis testnet.
+- Create IBC relayer channel between Namada SE ("channel-90") and Osmosis testnet ("channel-5600").
+- Unshielded transfer between Namada SE and Osmosis testnet.
+- Shielded transfer from Namada SE to Osmosis testnet.
 
 ## Deploy a full node for Osmosis testnet
 Refer to Osmosis node guideline.  
