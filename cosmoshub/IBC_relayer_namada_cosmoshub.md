@@ -15,6 +15,7 @@ gaiad keys add "relayer_cosmos"
   mnemonic: ""
 **Important** write this mnemonic phrase in a safe place.
 It is the only way to recover your account if you ever forget your password.
+
 jeans equip blind shy noble umbrella sadness auction angle ride fly dirt enlist rural arctic snake cable elevator luxury differ pair churn delay only
 ```
 
