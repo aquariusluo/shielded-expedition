@@ -5,7 +5,7 @@ Cosmoshub testnet
 gaiad v14.1.0  
 Chain ID: theta-testnet-001  
 
-# Generate an account via gaiad and get faucet
+# Generate cosmos relayer and get faucet
 ```
 gaiad keys add "relayer_cosmos"
 - name: relayer_cosmos
