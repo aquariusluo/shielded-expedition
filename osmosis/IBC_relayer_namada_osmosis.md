@@ -174,6 +174,7 @@ trust_threshold = { numerator = '1', denominator = '3' }
 rpc_timeout = '30s'
 EOF
 ```
+
 ## Add the relayer keys to Hermes
 ```
 echo "sadness gallery audit junk key hurt rifle vivid aisle nation fruit brain until track gasp mention before sting collect patch math resemble man limit" > ./mnemonic  
@@ -255,6 +256,10 @@ id: "shielded-expedition.88f17d1d14", channel_id: "channel-90"
 id: "osmo-test-5", channel_id: "channel-5600"  
 export CHANNEL_ID_A="channel-90"  
 export CHANNEL_ID_B="channel-5600"  
+
+## Start hermes service
+systemctl --user start hermesd  
+journalctl --user-unit=hermesd.service -f  
 
 ## IBC-tranfer 
 - Check balance before transfer
