@@ -402,3 +402,33 @@ balances:
 - amount: "98986614"
   denom: uosmo
 ```
+# Update client
+```
+hermes query channel end --chain shielded-expedition.88f17d1d14 --port transfer --channel channel-90 
+hermes query client state --chain shielded-expedition.88f17d1d14 --client 07-tendermint-345
+```
+```
+hermes create client --host-chain shielded-expedition.88f17d1d14 --reference-chain osmo-test-5
+
+SUCCESS WriteAcknowledgement(
+    WriteAcknowledgement {
+        packet: Packet {
+            sequence: Sequence(
+                21,
+            ),
+            source_port: PortId(
+                "transfer",
+            ),
+            source_channel: ChannelId(
+                "channel-781",
+            ),
+            destination_port: PortId(
+                "transfer",
+            ),
+            destination_channel: ChannelId(
+                "channel-165",
+            ),
+....
+```
+export CHANNEL_ID_A="channel-781"  
+export CHANNEL_ID_B="channel-165" 
