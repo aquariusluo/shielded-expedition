@@ -403,3 +403,78 @@ balances:
   denom: uosmo
 ```
 
+# Recreate IBC channel
+Due to SE network waw halted and then relanch. IBC channels must be recreated.
+```
+hermes --config $HERMES_CONFIG \
+  create channel \
+  --a-chain $CHAIN_ID_A \
+  --b-chain $CHAIN_ID_B \
+  --a-port transfer \
+  --b-port transfer \
+  --new-client-connection --yes
+```
+
+<details>
+    <summary> SUCCESS Channel </summary>
+  
+```
+{
+    ordering: Unordered,
+    a_side: ChannelSide {
+        chain: BaseChainHandle {
+            chain_id: ChainId {
+                id: "shielded-expedition.88f17d1d14",
+                version: 0,
+            },
+            runtime_sender: Sender { .. },
+        },
+        client_id: ClientId(
+            "07-tendermint-986",
+        ),
+        connection_id: ConnectionId(
+            "connection-399",
+        ),
+        port_id: PortId(
+            "transfer",
+        ),
+        channel_id: Some(
+            ChannelId(
+                "channel-259",
+            ),
+        ),
+        version: None,
+    },
+    b_side: ChannelSide {
+        chain: BaseChainHandle {
+            chain_id: ChainId {
+                id: "osmo-test-5",
+                version: 5,
+            },
+            runtime_sender: Sender { .. },
+        },
+        client_id: ClientId(
+            "07-tendermint-2231",
+        ),
+        connection_id: ConnectionId(
+            "connection-2115",
+        ),
+        port_id: PortId(
+            "transfer",
+        ),
+        channel_id: Some(
+            ChannelId(
+                "channel-5803",
+            ),
+        ),
+        version: None,
+    },
+    connection_delay: 0ns,
+}
+```
+</details>
+
+id: "shielded-expedition.88f17d1d14", channel_id: "channel-259"  
+id: "osmo-test-5", channel_id: "channel-5803"  
+export CHANNEL_ID_A="channel-259"  
+export CHANNEL_ID_B="channel-5803"  
