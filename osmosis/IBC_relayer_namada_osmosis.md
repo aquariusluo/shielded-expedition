@@ -5,6 +5,10 @@ Summary:
 3. Unshielded transfer between Namada SE and Osmosis testnet.
 4. Shielded transfer from Namada SE to Osmosis testnet.
 
+Channel:  
+shielded-expedition.88f17d1d14 <-> osmo-test-5  
+                   channel-259 <-> channel-5803  
+
 ## Deploy a full node for Osmosis testnet
 Refer to Osmosis node guideline.  
 https://github.com/osmosis-labs/testnets/tree/main/testnets/osmo-test-5
@@ -479,6 +483,7 @@ id: "osmo-test-5", channel_id: "channel-5803"
 export CHANNEL_ID_A="channel-259"  
 export CHANNEL_ID_B="channel-5803"  
 
+# Execute IBC-tranfer to check if it is operational.
 - Send naan from Namada to Osmosis with --memo PK
 ```
 namadac --base-dir ${BASE_DIR_A} \
@@ -499,7 +504,7 @@ Waiting for inner transaction result...
 Transaction was successfully applied at height 45863. Used 6193 gas.
 ```
 
-- Check balance of relayer_osmo
+- Check balance of relayer_osmo 
 ```
 osmosisd query bank balances osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033
 balances:
@@ -509,4 +514,28 @@ balances:
   denom: ibc/D9EBD74FB34DA85788243504A0EFB4CC192AD4E43388CFD0A49180E7507F2918
 - amount: "298826988"
   denom: uosmo
+```
+
+- Send uosmo from Osmosis to Namada
+```
+osmosisd tx ibc-transfer transfer \
+  transfer \
+  ${CHANNEL_ID_B} \
+  tnam1qq7nfjqrsg8x9vssf87wamav883dw6eargagd763 \
+  1000000uosmo \
+  --from relayer_osmo \
+  --gas auto \
+  --gas-prices 0.025uosmo \
+  --gas-adjustment 1.1 \
+  --node ${RPC_OSMO} \
+  --home ${BASE_DIR_B} \
+  --chain-id osmo-test-5 \
+  --yes
+```
+- Check balance of relayer_se
+```
+namadac balance --owner relayer_se --node $RPC_SE
+naan: 38
+transfer/channel-259/uosmo: 1000000
+transfer/channel-90/uosmo: 1000000
 ```
