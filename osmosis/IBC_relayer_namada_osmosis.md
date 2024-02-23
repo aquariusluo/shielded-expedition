@@ -478,3 +478,35 @@ id: "shielded-expedition.88f17d1d14", channel_id: "channel-259"
 id: "osmo-test-5", channel_id: "channel-5803"  
 export CHANNEL_ID_A="channel-259"  
 export CHANNEL_ID_B="channel-5803"  
+
+- Send naan from Namada to Osmosis with --memo PK
+```
+namadac --base-dir ${BASE_DIR_A} \
+    ibc-transfer \
+    --amount 1 \
+    --source relayer_se \
+    --receiver osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033 \
+    --token naan \
+    --channel-id ${CHANNEL_ID_A} \
+    --node ${RPC_SE} \
+    --memo tpknam1qqjgef9zsd0gsyqn3af9nrgxyhapef3cjn5cyxpjcjgtq60de6502p8rf8h
+Enter your decryption password: 
+Transaction added to mempool.
+Wrapper transaction hash: 7BC86097F6D1F9E9920DAA4BD2F383E52DBE9452B87358D20A14928733982296
+Inner transaction hash: 7BC02727945676F088BF103FC968850D9245264FF77510A760274FF7E0B88AF5
+Wrapper transaction accepted at height 45862. Used 26 gas.
+Waiting for inner transaction result...
+Transaction was successfully applied at height 45863. Used 6193 gas.
+```
+
+- Check balance of relayer_osmo
+```
+osmosisd query bank balances osmo1z6m8ndunsc6kxyyjh0y2yr48s9lufv9caqe033
+balances:
+- amount: "3"
+  denom: ibc/05D9D8E7078C5573DD0E05F43F88CE0E01D532C3106D7E3D3FFB115AF6950548
+- amount: "1"
+  denom: ibc/D9EBD74FB34DA85788243504A0EFB4CC192AD4E43388CFD0A49180E7507F2918
+- amount: "298826988"
+  denom: uosmo
+```
