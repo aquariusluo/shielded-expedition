@@ -5,7 +5,7 @@ Summary:
 3. Unshielded transfer between Namada SE and Osmosis testnet.
 4. Shielded transfer from Namada SE to Osmosis testnet.
 
-Channel:  
+**Channel:**  
 shielded-expedition.88f17d1d14 <-> osmo-test-5  
                    channel-259 <-> channel-5803  
 
