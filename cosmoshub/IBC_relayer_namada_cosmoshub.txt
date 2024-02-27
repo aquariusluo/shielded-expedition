@@ -140,14 +140,19 @@ Wrapper transaction accepted at height 79368. Used 26 gas.
 Waiting for inner transaction result...
 Transaction was successfully applied at height 79369. Used 6193 gas.
 
-namadac balance --owner relayer_se --node http://94.130.90.47:26657
-naan: 213
-transfer/channel-259/uosmo: 1000000
-transfer/channel-90/uosmo: 1000000
-
 gaiad query bank balances cosmos1c0cq0ujddy0cq0vxuv42wylglvgp85y5gyucg7 --chain-id theta-testnet-001 --node http://localhost:36657
 balances:
 - amount: "1"
   denom: ibc/28B7771FA1E48301E229F53C240EB6BBA162FF3AB865AA4A9F567940B663A616
 - amount: "6000000"
   denom: uatom
+
+(namada SE 没有收到uatom)
+namadac balance --owner relayer_se --node http://94.130.90.47:26657
+naan: 213
+transfer/channel-259/uosmo: 1000000
+transfer/channel-90/uosmo: 1000000
+
+TODO:
+hermes update client --host-chain shielded-expedition.88f17d1d14 --client 07-tendermint-1823
+hermes update client --host-chain theta-testnet-001 --client 07-tendermint-3247
