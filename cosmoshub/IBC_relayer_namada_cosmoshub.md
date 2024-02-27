@@ -26,3 +26,8 @@ balances:
 pagination:
   next_key: null
   total: "0"
+
+namadac balance --owner relayer_se --node http://94.130.90.47:26657
+naan: 244.5
+transfer/channel-259/uosmo: 1000000
+transfer/channel-90/uosmo: 1000000
