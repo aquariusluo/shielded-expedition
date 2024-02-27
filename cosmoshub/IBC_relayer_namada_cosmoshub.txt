@@ -94,3 +94,14 @@ SUCCESS Channel {
     connection_delay: 0ns,
 }
 ```
+
+namadac --base-dir ${BASE_DIR_A} \
+    ibc-transfer \
+    --amount 1 \
+    --source relayer_se \
+    --receiver cosmos1c0cq0ujddy0cq0vxuv42wylglvgp85y5gyucg7 \
+    --token naan \
+    --channel-id "channel-519" \
+    --node "http://127.0.0.1:26657" \
+    --memo tpknam1qqjgef9zsd0gsyqn3af9nrgxyhapef3cjn5cyxpjcjgtq60de6502p8rf8h
+  
