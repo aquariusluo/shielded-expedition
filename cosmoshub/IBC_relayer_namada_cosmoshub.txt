@@ -102,6 +102,19 @@ namadac --base-dir ${BASE_DIR_A} \
     --receiver cosmos1c0cq0ujddy0cq0vxuv42wylglvgp85y5gyucg7 \
     --token naan \
     --channel-id "channel-519" \
-    --node "http://127.0.0.1:26657" \
+    --node "http://94.130.90.47:26657" \
     --memo tpknam1qqjgef9zsd0gsyqn3af9nrgxyhapef3cjn5cyxpjcjgtq60de6502p8rf8h
   
+gaiad tx ibc-transfer transfer \
+  transfer \
+  channel-3913 \
+  tnam1qq7nfjqrsg8x9vssf87wamav883dw6eargagd763 \
+  1uatom \
+  --from relayer_cosmos \
+  --gas auto \
+  --gas-prices 0.05uatom \
+  --gas-adjustment 1.2 \
+  --node http://127.0.0.1:36657 \
+  --home $HOME/.gaia \
+  --chain-id theta-testnet-001 \
+  --yes
