@@ -19,3 +19,10 @@ It is the only way to recover your account if you ever forget your password.
 jeans equip blind shy noble umbrella sadness auction angle ride fly dirt enlist rural arctic snake cable elevator luxury differ pair churn delay only
 ```
 
+gaiad query bank balances cosmos1c0cq0ujddy0cq0vxuv42wylglvgp85y5gyucg7 --chain-id theta-testnet-001 --node http://localhost:36657
+balances:
+- amount: "6000000"
+  denom: uatom
+pagination:
+  next_key: null
+  total: "0"
