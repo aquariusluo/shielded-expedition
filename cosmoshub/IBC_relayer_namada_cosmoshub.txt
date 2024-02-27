@@ -118,3 +118,17 @@ gaiad tx ibc-transfer transfer \
   --home $HOME/.gaia \
   --chain-id theta-testnet-001 \
   --yes
+gas estimate: 104760
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: F30486FA2F622273A2EFD352A98B4AEDF849A2807F3134F3C759D32A19C09AC5
