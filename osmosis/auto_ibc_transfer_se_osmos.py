@@ -23,7 +23,7 @@ set rpc_node "http://IP:PORT"
 # Namada sender public key
 set wallet_pk
 # The minimum balance required to be maintained in a Namada sender wallet
-set threshold 0
+set threshold <MINIMAL_BALANCE>
 
 # Check current balance of Namada sender
 spawn namadac balance --owner $source_addr --node $rpc_node
