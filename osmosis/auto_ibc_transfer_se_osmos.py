@@ -1,6 +1,11 @@
 #!/usr/bin/expect -f
 
 # Use the system crontab to call this Python script, which automatically triggers the Namada IBC transfer command to send 1 naan from Namada testnet to the Osmosis testnet, thereby testing the availability of the IBC Relayer.
+# How to set up crontab to launch this script. There is an example.
+# execute command: crontab -e
+# Add a line at the end of the file which indicates to execute every 10 minutes between 3 AM and 4 AM UTC, for a total of 6 times.
+# */6 3 * * * /usr/bin/unbuffer /home/user/auto_ibc_transfer_se_osmos.py
+
 
 # Set up environment variables for Namada
 # Your Namada sender wallet password
